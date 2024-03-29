@@ -1,29 +1,27 @@
-# Trabajo Práctico Nro. 5
+# CESE CO20 FIUBA - TSSE - Trabajo Práctico Nro. 5 [TDD]
 
-TSSE - CO20 CESE 2023
+Se aplican técnicas de TDD para el desarrollo de una API para controlar LEDs. Se establecen  y ejecutan diversos tests para cada función que controla los LED. Además, se automatizó el proceso de pruebas online en GitHub.
 
 ## Uso del repositorio
 
-Este repositorio utiliza [pre-commit](https://pre-commit.com) para validaciones de formato. Para trabajar con el mismo usted debería tener instalado:
+Este repositorio usa [pre-commit](https://pre-comit.com) para validaciones de formato, y [ceedling](https://www.throwtheswitch.org/ceedling) para la ejecución de tests.
+Para trabajar con el mismo usted debería tener instalado:
 
+1. Instrucciones para instalar [`pre-commit`](https://pre-commit.com/#install)
+2. Para instalar `ceedling`:
 ```
-pre-commit (https://pre-commit.com/#install)
+sudo apt install ruby
+sudo gem install ceedling
 ```
-
-Después de clonar el repositorio usted debería ejecutar el siguiente comando:
-
+3. Después de clonar el repositorio ejecutar el siguiente comando:
 ```
 pre-commit install
 ```
-
-Para generar la documentación del proyecto se utiliza el siguiente comando:
-
+4. Para compilar el código y correr los tests:
 ```
-make doc
+ceedling
 ```
-
-Para compilar el proyecto se utiliza el siguiente comando:
-
+5. Para correr reporte de coverage:
 ```
-make all
+ceedling clobber gcov:all utils:gcov
 ```
