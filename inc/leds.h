@@ -10,7 +10,7 @@
 
 #include <stdint.h>
 
-#define selected_led_set_high_array (uint16_t)(1 << (led - 1))
+#define Convert_LED_to_BIT(led) (uint16_t)(1 << (led - 1))
 
 /* === Public function declarations ============================================================ */
 
@@ -28,6 +28,16 @@ void leds_turn_on(int led);
  * Esta funcion pone en bajo el LED indicado en led
  */
 void leds_turn_off(int led);
+
+/**
+ * Esta funcion pone en bajo todos los leds
+ */
+void leds_turn_all_off(void);
+
+/**
+ * Esta funcion pone en alto todos los leds
+ */
+void leds_turn_all_on(void);
 
 /**
  * Esta funcion devuelve 1 si el estado del led indicado en led es alto. Sino, devuelve 0.

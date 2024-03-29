@@ -16,24 +16,46 @@ static uint16_t * puntero;
 
 /* === Public function implementation ========================================================= */
 
-void leds_init(uint16_t * puerto) {
+void leds_init(uint16_t * puerto)
+{
     puntero = puerto;
     *puerto = 0;
     return;
 }
 
-void leds_turn_on(int led) {
-    *puntero |= selected_led_set_high_array;
+/* ============================================================================================ */
+
+void leds_turn_on(int led)
+{
+    *puntero |= Convert_LED_to_BIT(led);
 }
 
-void leds_turn_off(int led) {
-    *puntero &= ~selected_led_set_high_array;
+/* ============================================================================================ */
+
+void leds_turn_off(int led)
+{
+    *puntero &= ~Convert_LED_to_BIT(led);
 }
 
-int led_status(int led) {
-    if ((*puntero & selected_led_set_high_array) != 0) {
-        return 1;
-    } else {
-        return 0;
-    }
+/* ============================================================================================ */
+
+int led_status(int led)
+{
+    return ((*puntero & Convert_LED_to_BIT(led)) != 0);
 }
+
+/* ============================================================================================ */
+
+void leds_turn_all_off(void)
+{
+    *puntero &= 0x0000;
+}
+
+/* ============================================================================================ */
+
+void leds_turn_all_on(void)
+{
+    *puntero |= 0xFFFF;
+}
+
+/* ============================================================================================ */

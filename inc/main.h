@@ -31,27 +31,33 @@ SPDX-License-Identifier: MIT
 /* === Cabecera C++ ============================================================================ */
 
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
 
-/* === Public macros definitions =============================================================== */
+    /* === Public macros definitions ===============================================================
+     */
 
-/* === Public data type declarations =========================================================== */
+    /* === Public data type declarations ===========================================================
+     */
 
-/* === Public variable declarations ============================================================ */
+    /* === Public variable declarations ============================================================
+     */
 
-/* === Public function declarations ============================================================ */
+    /* === Public function declarations ============================================================
+     */
 
-/* Comentario normal */
+    /* Comentario normal */
 
-/**
- * @brief Función principal del sistema, se ejecuta al iniciar el programa
- *
- * @return int Valor de retorno, cero si esta todo bien, negativo si hay un error
- */
-int main(void);
+    /**
+     * @brief Función principal del sistema, se ejecuta al iniciar el programa
+     *
+     * @return int Valor de retorno, cero si esta todo bien, negativo si hay un error
+     */
+    int main(void);
 
-/* === End of documentation ==================================================================== */
+    /* === End of documentation ====================================================================
+     */
 
 #ifdef __cplusplus
 }

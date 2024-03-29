@@ -47,11 +47,13 @@ SPDX-License-Identifier: MIT
 
 /* === Private function implementation ========================================================= */
 
-void Delay(void) {
+void Delay(void)
+{
 }
 /* === Public function implementation ========================================================== */
 
-int main(void) {
+int main(void)
+{
     gpio_t led_rojo;
     gpio_t led_verde;
 
@@ -60,7 +62,8 @@ int main(void) {
 
     GpioSetDirection(led_rojo, true);
     GpioSetState(led_rojo, true);
-    while (1) {
+    while (1)
+    {
         GpioSetState(led_rojo, false);
         Delay();
         GpioSetState(led_rojo, true);
